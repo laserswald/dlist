@@ -1,0 +1,10 @@
+{
+    "name": "dlist",
+    "version": "0.0.1",
+    "src": [
+        "dlist.h"
+    ],
+    "repo":"laserswald/dlist",
+    "description": "Type safe generic doubly linked list in a single file.",
+    "keywords": ["generic", "double linked list", "macros"]
+}

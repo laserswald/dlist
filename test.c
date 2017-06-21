@@ -31,12 +31,13 @@ int main(void){
     assert_list_is(list, (int[]){2, 5, 3, 0, 0}, 3);
 
     // Pop test
-    dlist_element(int) *item = NULL;
-    dlist_pop(list, item);
+    int item = dlist_pop(int, list);
     assert_list_is(list, (int[]){2, 5}, 2);
 
     // Unshift test
-    dlist_unshift(list, item);
+    item = dlist_unshift(int, list);
     assert_list_is(list, (int[]){5}, 1);
+
+    dlist_free(int, list);
 }
 

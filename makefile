@@ -1,4 +1,4 @@
-CFLAGS=--std=c11
+CFLAGS=--std=c11 -O1
 
 all: test check
 

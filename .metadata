@@ -1,0 +1,3 @@
+NAME=dlist
+DESCRIPTION=Type safe generic doubly linked list in a single file.
+VERSION=0.0.1

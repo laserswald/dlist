@@ -51,28 +51,34 @@ int main(int argc, char **argv){
 In general, any function you want to use on a dlist takes the type it is specified with
 as the first argument, and the list itself as the second argument.
 
-#### Memory creation and deletion
 - `dlist_new(type)`
+
     Create a new dlist on the heap. You don't need to clear the memory; this does it for you.
 
 - `dlist_free(type, list)`
+    
     Free a dlist and it's elements from memory.
 
 - `dlist_shift(type, list, item)`
+    
     Move an item to the head of the dlist. If you pass NULL as the list, it will create
     a new dlist (via dlist_new) for you and prepend it to that.
 
 - `dlist_unshift(type, list)`
+    
     Pull an item from the head of the dlist. This will delete the associated element, too.
 
 - `dlist_push(type, list, item)`
+    
     Append an item to the tail of the dlist. If you pass NULL as the list, it will create
     a new dlist (via dlist_new) for you, just like dlist_shift.
 
 - `dlist_pop(type, list)`
+    
     Like dlist_unshift, but the back of the list.
 
 - `dlist_foreach(type, list, name)`
+    
     This is a special macro to iterate over a dlist, starting with the head.. A new element with the name will be created, and will point to the current item.
 
 - `dlist_foreach_rev(type, list, name)`

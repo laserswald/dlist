@@ -23,7 +23,7 @@
     struct dlist_element_##typename
 
 #define dlist_pop_decl(type, typename) \
-inline type dlist_##typename##_pop( dlist(typename)* list ) { \
+type dlist_##typename##_pop( dlist(typename)* list ) { \
     dlist_element(typename) *element = list->tail; \
     list->tail = list->tail->prev; \
     type retval = element->data; \
@@ -33,7 +33,7 @@ inline type dlist_##typename##_pop( dlist(typename)* list ) { \
 }
 
 #define dlist_unshift_decl(type, typename) \
-inline type dlist_##typename##_unshift( dlist(typename)* list ) { \
+type dlist_##typename##_unshift( dlist(typename)* list ) { \
     dlist_element(typename) *element = list->head; \
     list->head = list->head->next; \
     dlistel_break(element); \

@@ -140,10 +140,12 @@ type dlist_##typename##_unshift( dlist(typename)* list ) { \
  * Syntax sugar to iterate over a dlist.
  */
 #define dlist_foreach(type, list, name) \
-    for (dlist_element(type) *name = list->head; name != NULL; name = name->next)
+	dlist_element(type) *name;\
+    for (name = list->head; name != NULL; name = name->next)
 
 #define dlist_foreach_rev(type, list, name) \
-    for (dlist_element(type) name = list->tail; name != NULL; name = name->prev)
+	dlist_element(type) *name; \
+    for (name = list->tail; name != NULL; name = name->prev)
 
 // common dlists; declare more after your data structures
 dlist_declare(char*, string);

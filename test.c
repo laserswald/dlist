@@ -4,7 +4,8 @@
 
 void assert_list_is(dlist(int)* list, int* array, int len){
     dlist_element(int) *cursor = list->head;
-    for (int i = 0; i < len; ++i) {
+    int i;
+    for (i = 0; i < len; ++i) {
         assert(dlistel_data(cursor) == array[i]);
         cursor = cursor->next;
     }

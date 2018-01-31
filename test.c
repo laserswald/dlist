@@ -39,5 +39,6 @@ int main(void){
     assert_list_is(list, (int[]){5}, 1);
 
     dlist_free(int, list);
+    puts("Testing complete. No errors.");
 }
 

@@ -41,5 +41,6 @@ int main(void){
 
     dlist_free(int, list);
     puts("Testing complete. No errors.");
+    return 0;
 }
 

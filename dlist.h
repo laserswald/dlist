@@ -13,7 +13,7 @@
  * This structure consists of a "full list" type that manages element types. All of the raw element
  * type operations are exposed too, if you ever need to deal with them in some manner.
  *
- * The structure itself is declared when dlist_declare is run. The dlist name
+ * The structure itself is declared when dlist_declare is run. 
  */
 
 #define dlist(typename) \
